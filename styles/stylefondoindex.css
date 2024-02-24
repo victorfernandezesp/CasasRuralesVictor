@@ -1,0 +1,37 @@
+header {
+    background-color: rgb(255, 255, 255);
+    color: #ffffff;
+    padding: 2%;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 15vw;
+    position: relative;
+    height: auto;
+    
+}
+.logovictor {
+    border-radius: 10%;
+    width: 20%;
+    margin: auto;
+}
+/* Diseño para tablets */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .logovictor {
+        border-radius: 10%;
+        width: 15%;
+        margin: auto;
+    }
+}
+
+/* Diseño para ordenadores */
+@media screen and (min-width: 1200px) {
+    .logovictor {
+        border-radius: 10%;
+        width: 15%;
+        margin: auto;
+    }
+
+}

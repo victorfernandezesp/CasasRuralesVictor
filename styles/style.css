@@ -1,0 +1,268 @@
+/* Diseño en moviles */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    color: #ffffff;
+    padding: 2%;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vw;
+    position: relative;
+    height: auto;
+    
+}
+
+.logovictor {
+    border-radius: 10%;
+    width: 30%;
+    margin: auto;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    
+}
+header h1 {
+    flex-grow: 1;
+    margin: 0;
+    
+}
+
+main {
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.casoplonmovil {
+    width: 100%;
+    height: 200vw;
+    object-fit: cover;
+    filter: blur(1.5px);
+}
+
+.content-container {
+    top: 5%;
+    left: 6%;
+    animation: fadeInUp 2.5s ease-out;
+    animation-fill-mode: both;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 87%;
+}
+
+.descubre{
+    color: rgb(13, 82, 66);
+    font-size: 5.5vw;
+    font-weight: bold;
+    text-shadow: 0 0 30px #ffffff60;
+    background-color: rgba(255, 255, 255, 0.064);
+    display: block;
+    text-align: center;
+    padding: 2%;
+}
+
+.textaco {
+    text-align: justify;
+    color: rgb(10, 130, 102);
+    font-size: 3vw;
+    font-weight: bold;
+    display: block;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.064);
+    
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.casarural1{
+    width: 50%;
+    object-fit: cover;
+    margin-top: 1.5em;
+    border-radius: 5%;
+    background-color: rgba(255, 255, 255, 0.064);
+}
+.casarural2{
+    background-color: rgba(255, 255, 255, 0.064);
+    margin-top: 1em;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 5%;
+}
+.textito{
+    margin-top: 0.25em;
+    text-align: center;
+    color: rgb(10, 130, 102);
+    font-size: 3.2vw;
+    font-weight: bold;
+    display: block;
+    padding: 2%;
+    background-color: rgba(255, 255, 255, 0.064);
+    
+}
+.casitas-button{
+    margin: auto;
+    margin-top: 10%;
+    color: #ffffff;
+    font-size: 5vw;
+    font-weight: bold;
+    display: block;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 2%;
+    background-color: rgb(46, 80, 49);
+    text-decoration: none;
+    width: 70%;
+    animation: fadeInUp 2.5s ease-out;
+    animation-fill-mode: both;
+    box-shadow: #3d3c37 0px 0px 10px 0px;
+}
+
+.casitas-button:hover{
+    background-color: #fafffa93;
+    transition: background-color 1.8s ease-in-out;
+    color: #183a0a;
+    transition: color 0.8s ease;
+}
+
+
+footer {
+    color: rgb(10, 130, 102);
+    padding: 2%;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+footer a img {
+    display: inline-block;
+    width: 4vw;
+    padding: 2%;
+}
+footer .milogo {
+    display: inline-block;
+    width: 4vw;
+    padding: 2%;
+}
+
+
+
+
+
+/* Diseño para tablets */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .logovictor {
+        border-radius: 10%;
+        width: 20%;
+      }
+    .casoplonmovil {
+        height: 175vw;
+    }
+    .descubre{
+        font-size: 3.5vw;
+        background-color: #ffffff2b;
+    }
+    .textaco {
+        font-size: 2.5vw;
+        margin-top: 7%;
+        background-color: #ffffff2b;
+    }
+    .contenedordecasas img{
+        width: 40%;
+    }
+    .contenedordecasas p{
+        font-size: 2.75vw;
+        font-weight: bold;
+    }
+    .casitas-button{
+        width: 50%;
+        font-size: 2.5vw;
+    }
+    
+}
+
+/* Diseño para ordenadores */
+@media screen and (min-width: 1200px) {
+    .logovictor {
+        border-radius: 10%;
+        width: 10%;
+      }
+    .casoplonmovil {
+        height: 70vw;
+    }
+    .descubre{
+        font-size: 2.7vw;
+    }
+    .textaco {
+        
+        font-size: 2.25vw;
+        
+    }
+    .contenedordecasas{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .contenedordecasas img{
+        width: 40%;
+    }
+    .contenedordecasas p{
+        font-size: 1.75vw;
+        font-weight: bold;
+    }
+
+    .casitas-button{
+        width: 30%;
+        font-size: 1.5vw;
+    }
+
+    .casarural1:hover{
+        box-shadow: #699042 0px 0px 10px 0px;
+        transition: box-shadow 0.8s ease-in-out;
+        
+    }
+    .casarural2:hover{
+        box-shadow: #699042 0px 0px 10px 0px;
+        transition: box-shadow 0.8s ease-in-out;
+        
+    }
+    footer {
+        color: rgb(10, 130, 102);
+        padding: 2%;
+        text-align: center;
+        font-size: 0.75vw;
+        font-weight: bold;
+    }
+    
+    footer a img {
+        display: inline-block;
+        width: 2vw;
+        padding: 2%;
+    }
+    footer .milogo {
+        display: inline-block;
+        width: 2vw;
+        padding: 2%;
+    }
+
+
+}

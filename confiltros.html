@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="Victor Fernandez España">
+    <title>Práctica 12 Víctor Fernández España</title>
+    <script src="actualizarprecio.js"></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/stylebusca.css">
+    <link rel="stylesheet" href="styles/stylefondoindex.css">
+
+
+</head>
+
+<body>
+    <header>
+        <img src="img/casoncasa.png" alt="Foto de un Logo" class="logovictor">
+    </header>
+
+    <div class="cabecera">
+        <div class="columna1">
+
+            <div class="buscador">
+                <div class="filtros">
+
+                    <div class="listado">
+                        <p class="palabrafiltrar">☰</p>
+
+                        <ul class="filtro-lista">
+                            <li><input type="checkbox" id="filtro1"><label for="filtro1" class="filtro1">Wifi</label>
+                            </li>
+                            <li><input type="checkbox" id="filtro2"><label for="filtro2" class="filtro1">Piscina</label>
+                            </li>
+                            <li><input type="checkbox" id="filtro3"><label for="filtro3"
+                                    class="filtro1">Barbacoa</label></li>
+                            <li><input type="checkbox" id="filtro3"><label for="filtro3"
+                                    class="filtro1">Mascotas</label></li>
+                            <li><input type="checkbox" id="filtro3"><label for="filtro3"
+                                    class="filtro1">Senderismo</label></li>
+                            <li><input type="checkbox" id="filtro3"><label for="filtro3" class="filtro1">Piragua</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <form action="confiltros.html" method="post">
+                <input type="text" id="busqueda" name="q" placeholder="Buscar 🔎" class="busqueda" />
+            </form>
+            <div class="precio">
+                <form>
+                    <label for="rangoprecio">Selecciona el precio</label>
+                    <input type="range" id="rangoprecio" name="priceRange" min="40" max="300" step="10" value="40"
+                        oninput="updatePrice(this.value)">
+                    <output for="rangoprecio" id="preciomostrado">40</output> <span class="euros">€</span>
+                </form>
+            </div>
+        </div>
+        <div class="opciones_filtros">
+            <div class="calendario">
+                <label for="entrada">Entrada</label>
+                <input type="date" id="entrada" name="entrada" class="entrada" />
+                <label for="salida">Salida</label>
+                <input type="date" id="salida" name="salida" class="salida" />
+            </div>
+        </div>
+        <div class="botonaplica">
+            <a href="confiltros.html" class="botonbusqueda">Aplicar Filtros</a>
+        </div>
+        <div class="ordenapor">
+
+            <label for="ordenar">Ordenar por:</label>
+            <select name="ordenar" id="ordenar">
+                <option value="destacados"> Destacados </option>
+                <option value="valoracion"> Valoración </option>
+                <option value="numpersonas"> Núm. de Personas Asc.</option>
+                <option value="numpersonasdesc"> Núm. de Personas Desc.</option>
+                <option value="precioasc"> Precio Ascendente </option>
+                <option value="preciodesc"> Precio Descendente </option>
+            </select>
+        </div>
+
+
+
+    </div>
+
+
+    <main>
+        <h2 class="destacados">Resultados de la busqueda</h2>
+
+        <section id="section1" class="section1">
+            <input type="radio" name="slides" id="slide1" checked>
+            <input type="radio" name="slides" id="slide2">
+            <input type="radio" name="slides" id="slide3">
+
+            <div class="tarjetas-container">
+                <!-- la tarjeta 1 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/c1.webp" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Casa Rural "La Toscana"</h3>
+                            <ul>
+                                <li> 🍖 Comida incluida </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨 8 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 190€ / noche </li>
+                                <li> 🗺️ Montalban, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- la tarjeta 2 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/c2.webp" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Casa Rural "La Huerta"</h3>
+                            <ul>
+                                <li> 🤖Visitas VR </li>
+                                <li> 🧑‍🤝‍🧑 4 Personas </li>
+                                <li> 🏨 4 Habitaciones </li>
+                                <li> 🐕 Mascotas NO </li>
+                                <li> 💰 Desde 170€ / noche </li>
+                                <li> 🗺️ Lucena, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- la tarjeta 3 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/c3.jpg" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Casa Rural "El Paraiso"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨 4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ Montalban, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- la tarjeta 1 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/c1.webp" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Casa Rural "La Toscana"</h3>
+                            <ul>
+                                <li> 🍖 Comida incluida </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨 8 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 190€ / noche </li>
+                                <li> 🗺️ Montalban, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- la tarjeta 2 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/c2.webp" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Casa Rural "La Huerta"</h3>
+                            <ul>
+                                <li> 🤖Visitas VR </li>
+                                <li> 🧑‍🤝‍🧑 4 Personas </li>
+                                <li> 🏨 4 Habitaciones </li>
+                                <li> 🐕 Mascotas NO </li>
+                                <li> 💰 Desde 170€ / noche </li>
+                                <li> 🗺️ Lucena, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- la tarjeta 3 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/c3.jpg" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Casa Rural "El Paraiso"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨 4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ Montalban, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+
+
+            </div>
+        </section>
+
+        <section id="section1" class="section1">
+            <input type="radio" name="slides" id="slide1" checked>
+            <input type="radio" name="slides" id="slide2">
+            <input type="radio" name="slides" id="slide3">
+
+            <div class="tarjetas-container">
+                <!-- la tarjeta 1 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/ch1.jpg" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Chalet Rural "El Capo"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ El Carpio, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- la tarjeta 2 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/ch2.jpg" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Chalet Rural "El Servidor"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ Montalban, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- la tarjeta 3 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/ch3.jpg" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Chalet Rural "Doña Manolita"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ Cerro Muriano </li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- la tarjeta 1 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/ch1.jpg" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Chalet Rural "El Capo"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ El Carpio, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- la tarjeta 2 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/ch2.jpg" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Chalet Rural "El Servidor"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ Montalban, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+
+
+            </div>
+        </section>
+
+        <section id="section1" class="section1">
+            <input type="radio" name="slides" id="slide1" checked>
+            <input type="radio" name="slides" id="slide2">
+            <input type="radio" name="slides" id="slide3">
+
+            <div class="tarjetas-container">
+                <!-- la tarjeta 1 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/h1.jpg" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Casa Rural "La Panadera"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ Montalban, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- la tarjeta 2 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/Rural2.jpg" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Casa Rural "Chama"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ Montalban, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- la tarjeta 3 -->
+                <article class="tarjeta">
+                    <div class="tarjeta-contiene">
+
+                        <img src="img/h3.webp" alt="Foto de una casa" class="foto">
+                        <div class="info">
+                            <h3>Casa Rural "La Notaría"</h3>
+                            <ul>
+                                <li> 🏊Piscina </li>
+                                <li> 🧑‍🤝‍🧑 6 Personas </li>
+                                <li> 🏨4 Habitaciones </li>
+                                <li> 🐕 Admite Mascotas </li>
+                                <li> 💰 Desde 140€ / noche </li>
+                                <li> 🗺️ Montalban, Córdoba</li>
+                            </ul>
+                            <a href="masInfoCasa.html" target="_blank" class="boton">Más Información</a>
+                        </div>
+                    </div>
+                </article>
+
+
+
+
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="footer">
+        <p> Víctor Fernández España </p>
+        <a href="https://www.instagram.com/vicfe_fotografia/" target="_blank">
+            <img src="img/logo_instagram.svg" alt="Link Instagram">
+        </a>
+
+        <img src="img/logo_victor.png" alt="Yopp" class="milogo">
+
+        <a href="https://twitter.com/victor_17fesp" target="_blank">
+            <img src="img/logo_twitter.svg" alt="Link Twitter/X">
+        </a>
+
+        <p>&copy; 2023 Víctor Fernández España. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

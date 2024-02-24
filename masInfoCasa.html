@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="Victor Fernandez España">
+    <title>Práctica 12 Víctor Fernández España</title>
+    <script src="actualizarprecio.js"></script>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styleinfocasa.css">
+    <link rel="stylesheet" href="styles/styleinfocasa.css">
+
+
+
+</head>
+
+<body>
+    <header>
+        <img src="img/casoncasa.png" alt="Foto de un Logo" class="logovictor">
+    </header>
+
+    <main>
+
+        <div class="imagenes">
+            <img src="img/ch1.jpg" alt="Foto de la casa" class="foto">
+            <img src="img/baños.webp" alt="Foto de la casa" class="foto">
+            <img src="img/cocina.jpg" alt="Foto de la casa" class="foto">
+            <img src="img/salon.jpg" alt="Foto de la casa" class="foto">
+            <img src="img/dormitorio.webp" alt="Foto de la casa" class="foto">
+            <img src="img/dormitorio2.jpg" alt="Foto de la casa" class="foto">
+        </div>
+
+        <div class="precioyvalora">
+            <ul class="ulpv">
+                <li>4.5/5 <img src="img/estrellas.png" class="estrellas" alt="Estrellas de valoración"></li>
+                <li>100€/Noche</li>
+            </ul>
+        </div>
+
+        <div class="contenidogordo">
+            <div class="tarjeta">
+                <div class="informacioncasa">
+
+                    <h2>Casa de campo en Córdoba </h2>
+                    <p> Esta encantadora casa de campo en Córdoba, es un refugio perfecto para aquellos que
+                        buscan
+                        escapar del bullicio de la ciudad y sumergirse en la serenidad del campo. Con una extensión de
+                        150
+                        m², esta propiedad ofrece un amplio espacio para que tú y tus seres queridos disfruten de la
+                        tranquilidad de la naturaleza. </p>
+
+                    <p> La casa cuenta con un acogedor salón, un luminoso comedor y una cocina totalmente reformada.
+                        Además, podrás relajarte y disfrutar de la brisa fresca
+                        en la
+                        terraza con vistas panorámicas al exuberante paisaje circundante.</p>
+                </div>
+                <div class="caracteristicasemojis">
+                    <h3>Características</h3>
+                    <ul class="caract">
+                        <li>📏 150 m²</li>
+                        <li>🛋️ 1 salón</li>
+                        <li>🍽️ 1 comedor</li>
+                        <li>🏞️ 1 terraza</li>
+                        <li>🛏️ 3 habitaciones</li>
+                        <li>🛁 2 baños</li>
+                        <li>🍽️ Cocina</li>
+                        <li>🏞️ Jardín</li>
+                        <li>🚗 Parking</li>
+                        <li> 🐕 Admite Mascotas </li>
+                    </ul>
+                </div>
+
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1823.2238871087025!2d-0.805597712069614!3d40.83157972406438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5eee57efcd3421%3A0x9f024e8e6004c55d!2s44700%20Montalb%C3%A1n%2C%20Teruel!5e0!3m2!1ses!2ses!4v1707158667484!5m2!1ses!2ses"
+                        width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+
+            <div class="formulario">
+                <h2>Reserva</h2>
+                <form>
+                    <div class="datospersonales">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="nombre input valido" required />
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" class="apellidos input valido" required />
+                        <label for="email"> Email </label>
+                        <input type="email" id="email" name="email" class="email input valido" required />
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" class="telefono input valido" required />
+                    </div>
+                    <div class="calendario">
+                        <label for="entrada">Entrada</label>
+                        <input type="date" id="entrada" name="entrada" class="entrada input valido" required />
+                        <label for="salida">Salida</label>
+                        <input type="date" id="salida" name="salida" class="salida input valido" required />
+                    </div>
+                    <div class="personas">
+                        <div class="npersonas">
+                            <output for="rangoprecio" id="preciomostrado">2</output> <span class="euros">Personas</span>
+                        </div>
+                        <input type="range" id="rangoprecio" name="priceRange" min="2" max="10" step="1" value="2"
+                            oninput="updatePrice(this.value)">
+                    </div>
+
+                    <input type="submit" value="Reservar" class="reservar">
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <footer id="footer">
+        <p> Víctor Fernández España </p>
+        <a href="https://www.instagram.com/vicfe_fotografia/" target="_blank">
+            <img src="img/logo_instagram.svg" alt="Link Instagram">
+        </a>
+
+        <img src="img/logo_victor.png" alt="Yopp" class="milogo">
+
+        <a href="https://twitter.com/victor_17fesp" target="_blank">
+            <img src="img/logo_twitter.svg" alt="Link Twitter/X">
+        </a>
+
+        <p>&copy; 2023 Víctor Fernández España. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
